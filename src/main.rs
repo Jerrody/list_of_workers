@@ -1,11 +1,11 @@
 use std::{
     collections::HashMap,
     fs::{File, OpenOptions},
-    io::{stdin, BufRead, Result, Write},
+    io::{stdin, BufRead, Write},
     process::exit,
 };
 
-fn main() -> Result<()> {
+fn main() -> io::Result<()> {
     let mut list_of_employers: HashMap<String, Vec<String>> = HashMap::new();
 
     for lines in stdin().lock().lines() {
